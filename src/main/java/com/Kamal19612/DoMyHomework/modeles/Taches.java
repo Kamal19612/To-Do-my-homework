@@ -11,6 +11,8 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name="Taches")
+@Getter
+@Setter
 public class Taches {
 
     @Id
@@ -36,9 +38,4 @@ public class Taches {
     @Enumerated(EnumType.STRING)
     private CategorieTache categorie;
 
-    @Getter
-    @Setter
-    @ManyToOne
-    @JoinColumn(name = "id_user")
-    private Users user;
 }

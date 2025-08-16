@@ -7,17 +7,15 @@ import java.util.List;
 
 public interface TachesServices {
 
-    Taches creerTache(Taches t, Long utilisateurId);
+    public Taches creerTache(Taches t);
 
-    List<Taches> listerTaches();
+    public List<Taches> listerTaches();
 
-    List<Taches> listerTachesParUtilisateur(Long utilisateurId);
+    public Object trouverTacheParId(Long id);
 
-    Taches trouverTacheParId(Long id);
+    public Taches mettreAJourTache(Long id, Taches nouvelleTache);
 
-    Taches mettreAJourTache(Long id, Taches nouvelleTache);
+    public String supprimerTache(Long id);
 
-    void supprimerTache(Long id);
-
-    Taches changerStatut(Long id, StatutTache nouveauStatut);
+    // public Taches changerStatut(Long id, StatutTache nouveauStatut);
 }
